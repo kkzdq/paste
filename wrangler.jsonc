@@ -1,0 +1,13 @@
+{
+  // Cloudflare Workers 配置（"Deploy to Cloudflare" 按钮会读取此文件自动创建 Worker 并绑定资源）
+  "name": "paste",
+  "main": "index.js",
+  "compatibility_date": "2026-11-01",
+  "kv_namespaces": [
+    {
+      // 点击部署按钮时，Cloudflare 会提示选择或自动创建此 KV 命名空间
+      "binding": "JTB",
+      "id": "placeholder"
+    }
+  ]
+}
