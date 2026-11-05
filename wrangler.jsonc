@@ -1,5 +1,6 @@
 {
   // Cloudflare Workers 配置（"Deploy to Cloudflare" 按钮会读取此文件自动创建 Worker 并绑定资源）
+  // 注意：部署前需将 kv_namespaces[0].id 替换为真实的 KV Namespace ID
   "name": "paste",
   "main": "index.js",
   "compatibility_date": "2026-11-01",
