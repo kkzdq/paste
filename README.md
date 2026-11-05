@@ -2,6 +2,8 @@
 
 基于 Cloudflare Workers + KV 的在线剪贴板，支持多设备同步文本、历史记录管理与限时分享链接。
 
+原项目地址：https://github.com/yun8862779/web-clipboard/tree/main
+
 [![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/kkzdq/paste)
 
 ## 功能特性
