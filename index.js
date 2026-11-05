@@ -203,7 +203,7 @@ const htmlTemplate = `
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       padding: 40px;
       width: 90%;
-      max-width: 750px;
+      max-width: 700px;
       margin: 0 auto;
       transition: background-color 0.5s ease;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
@@ -247,7 +247,7 @@ const htmlTemplate = `
       color: white;
       border: 1px solid #2980b9;
       padding: 10px 12px;
-      margin: 4px;
+      margin: 6px;
       border-radius: 8px;
       cursor: pointer;
       font-size: 15px;
@@ -351,6 +351,7 @@ const htmlTemplate = `
       }
       button {
         padding: 10px 14px;
+        margin: 4px;
         font-size: 14px;
       }
       h1 {
