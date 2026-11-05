@@ -133,8 +133,8 @@ function generateUUID() {
 }
 
 const manifestContent = `{
-  "name": "Paste 在线剪贴板",
-  "short_name": "Paste",
+  "name": "在线剪贴板",
+  "short_name": "剪贴板",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#f4f4f4",
@@ -157,7 +157,7 @@ const htmlTemplate = `
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <title>Paste 在线剪贴板</title>
+  <title>在线剪贴板</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="https://img.xwyue.com/i/2025/01/06/677b63d2572db.png">
@@ -203,7 +203,7 @@ const htmlTemplate = `
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       padding: 40px;
       width: 80%;
-      max-width: 500px;
+      max-width: 750px;
       transition: background-color 0.5s ease;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
     }
@@ -216,7 +216,7 @@ const htmlTemplate = `
     .view.active { display: block; }
     textarea {
       width: calc(100% - 30px);
-      height: 250px;
+      height: 375px;
       margin-bottom: 20px;
       padding: 15px;
       border: none;
@@ -283,7 +283,7 @@ const htmlTemplate = `
 
     /* 历史记录列表 */
     #historyList {
-      max-height: 55vh;
+      max-height: 60vh;
       overflow: auto;
     }
     .history-item {
@@ -341,17 +341,21 @@ const htmlTemplate = `
     @media (max-width: 768px) {
       .container {
         padding: 20px;
+        width: 90%;
       }
       textarea {
-        height: 200px;
+        height: 45vh;
         font-size: 16px;
       }
       button {
-        padding: 8px 8px;
-        font-size: 13px;
+        padding: 10px 14px;
+        font-size: 14px;
       }
       h1 {
         font-size: 2em;
+      }
+      .button-group {
+        flex-wrap: wrap;
       }
     }
 
@@ -499,14 +503,14 @@ const htmlTemplate = `
   <!-- 主界面 -->
   <div id="mainView" class="view active">
     <div class="container">
-      <h1>Paste</h1>
+      <h1>在线剪贴板</h1>
       <textarea id="clipboard" placeholder="在此处粘贴内容..."></textarea>
       <div class="button-group">
         <button id="saveBtn" title="保存到云端"><i class="fas fa-cloud-upload-alt"></i>保存</button>
         <button id="readBtn" title="从云端读取"><i class="fas fa-cloud-download-alt"></i>读取</button>
         <button id="copyBtn" title="复制到本地"><i class="fas fa-copy"></i>复制</button>
-        <button id="shareBtn" title="分享"><i class="fas fa-share-alt"></i>分享</button>
         <button id="historyBtn" title="历史记录"><i class="fas fa-history"></i>历史</button>
+        <button id="shareBtn" title="分享"><i class="fas fa-share-alt"></i>分享</button>
       </div>
     </div>
   </div>
